@@ -1,0 +1,40 @@
+---
+title: "WS 5"
+format: 
+  html:
+    theme: cerulean
+  pdf:
+    theme: cerulean
+editor: visual
+---
+
+```{r}
+library(ggplot2)
+library(palmerpenguins)
+```
+
+## Data Cleaning {#sec-cleaning}
+
+See Section @sec-cleaning for details on how the data was prepared.
+
+```{r}
+#| label: fig-bill
+#| fig-cap: "Bill length vs flipper length"
+ggplot(penguins, aes(x = flipper_length_mm, y = bill_length_mm)) +
+  geom_point()
+```
+
+Figure @fig-bill shows the relationship between flipper length and bill length.
+
+```{r}
+#| label: tbl-summary
+#| tbl-cap: "Summary statistics of the penguins dataset"
+knitr::kable(summary(penguins))
+
+```
+
+See Table @tbl-summary for summary statistics of the dataset.
+
+```{r}
+
+```
